@@ -46,7 +46,7 @@ les concepts DevOps et l’architecture Frontend / Backend.
 Lancer le serveur Spring Boot :
 
 ```bash
-./mvnw spring-boot:run
+./mvnw spring-boot:run ```
 L'API sera disponible sur :
 http://localhost:8080/users/register
 
@@ -65,4 +65,5 @@ Copier le code
 
 go
 Copier le code
+
 
