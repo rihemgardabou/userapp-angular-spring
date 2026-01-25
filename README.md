@@ -43,7 +43,6 @@ les concepts DevOps et l’architecture Frontend / Backend.
 
  
  Backend
-```bash
 .\mvnw spring-boot:run
 
 API disponible sur :
@@ -55,6 +54,7 @@ ng serve
 
 Application disponible sur :
 http://localhost:4200
+
 
 
 
