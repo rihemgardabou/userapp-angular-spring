@@ -39,6 +39,8 @@ les concepts DevOps et l’architecture Frontend / Backend.
 ---
 
 ##  Lancer le projet
+
+
  
  Backend
 ```bash
@@ -51,9 +53,9 @@ Frontend
 npm install
 ng serve
 
-
 Application disponible sur :
 http://localhost:4200
+
 
 
 
