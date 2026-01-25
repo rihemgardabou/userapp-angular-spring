@@ -39,33 +39,25 @@ les concepts DevOps et l’architecture Frontend / Backend.
 ---
 
 ## Lancer le projet
-Backend
 
-Installer et lancer le backend avec Maven :
+### Backend
 
-.\mvnw spring-boot:run
-
-
-L’API sera disponible sur :
+```bash
+# Lancer l'application Spring Boot
+./mvnw spring-boot:run
+API disponible sur :
 http://localhost:8080/users/register
 
 Frontend
-
-Installer les dépendances et lancer le frontend Angular :
-
+bash
+Copier le code
+# Installer les dépendances
 npm install
+
+# Lancer l'application Angular
 ng serve
-
-
-L’application sera disponible sur :
+Application disponible sur :
 http://localhost:4200
 
-
-
-
-
-
-
-
-
-
+go
+Copier le code
