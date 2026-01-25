@@ -58,19 +58,7 @@ Application disponible sur :
 
 http://localhost:4200
 
-### Objectif pédagogique
 
-Ce projet permet de comprendre :
-
-La communication entre Angular et Spring Boot
-
-La gestion des formulaires et validations
-
-Les bases du DevOps (CI/CD, déploiement futur)
-
-### Réalisé par
-
-Rihem Gardabou
 
 
 
