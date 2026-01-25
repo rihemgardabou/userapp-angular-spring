@@ -40,7 +40,7 @@ les concepts DevOps et l’architecture Frontend / Backend.
 
 ##  Lancer le projet
 
-### Backend
+## Backend
 ```bash
 .\mvnw spring-boot:run
 
@@ -58,7 +58,7 @@ Application disponible sur :
 
 http://localhost:4200
 
-## Objectif pédagogique
+## # Objectif pédagogique
 
 Ce projet permet de comprendre :
 
@@ -68,7 +68,8 @@ La gestion des formulaires et validations
 
 Les bases du DevOps (CI/CD, déploiement futur)
 
-## Réalisé par
+### Réalisé par
 
 Rihem Gardabou
+
 
