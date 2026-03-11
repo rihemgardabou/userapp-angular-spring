@@ -1,0 +1,108 @@
+<div class="container">
+  <!-- LEFT PANEL -->
+  <div class="left-panel">
+    <h1>Bienvenue </h1>
+    <H3>Créez votre compte.</H3>
+    <span class="bubble b1"></span>
+    <span class="bubble b2"></span>
+    <span class="bubble b3"></span>
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="right-panel">
+    <h2>Parlez-nous un peu de vous</h2>
+
+    <form #f="ngForm" (ngSubmit)="register(f)">
+      <div class="row">
+        <div class="field">
+          <label>Nom</label>
+          <input type="text" name="nom" [(ngModel)]="user.nom" required>
+        </div>
+
+        <div class="field">
+          <label>Prénom</label>
+          <input type="text" name="prenom" [(ngModel)]="user.prenom" required>
+        </div>
+      </div>
+
+      <div class="field">
+  <label>Email</label>
+  <input
+    type="email"
+    name="email"
+    [(ngModel)]="user.email"
+    required
+    placeholder="exemple@gmail.com"
+    pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$"
+    #mail="ngModel"
+  >
+</div>
+
+<!-- message erreur email -->
+<div class="error" *ngIf="mail.invalid && mail.touched">
+  Veuillez entrer une adresse Gmail valide ❌
+</div>
+
+
+     <div class="field">
+  <label>Téléphone</label>
+
+  <div class="phone-input">
+    <span class="prefix">+216</span>
+    <input
+      type="text"
+      name="telephone"
+      [(ngModel)]="user.telephone"
+      required
+      pattern="^[0-9]{8}$"
+      maxlength="8"
+      placeholder="12345678"
+      #tel="ngModel"
+    >
+  </div>
+</div>
+
+<!-- message erreur téléphone -->
+<div class="error" *ngIf="tel.invalid && tel.touched">
+  Le numéro doit contenir exactement 8 chiffres ❌
+</div>
+
+
+      <div class="field">
+        <label>Date de naissance</label>
+        <input type="date" name="dateNaissance" [(ngModel)]="user.dateNaissance" required>
+      </div>
+
+      <div class="field">
+  <label>Mot de passe</label>
+  <input
+    type="password"
+    name="password"
+    [(ngModel)]="user.password"
+    required
+    minlength="8"
+    placeholder="Au moins 8 caractères"
+    #pwd="ngModel"
+  >
+</div>
+
+<!-- message erreur mot de passe -->
+<div class="error" *ngIf="pwd.invalid && pwd.touched">
+  Le mot de passe doit contenir au moins 8 caractères ❌
+</div>
+
+
+      <button type="submit" class="btn-submit" [disabled]="f.invalid">
+        S’inscrire
+      </button>
+    </form>
+  </div>
+
+  <!-- ALERT MODAL -->
+  <div class="alert-modal" *ngIf="showAlert">
+    <div class="alert-box" [ngClass]="messageType">
+      <p>{{ message }}</p>
+      <button (click)="closeAlert()">OK</button>
+    </div>
+  </div>
+</div>

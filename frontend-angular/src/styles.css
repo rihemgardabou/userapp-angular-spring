@@ -1,0 +1,171 @@
+/* GLOBAL */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: #e9e9e9;
+}
+
+app-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* CONTAINER (CARTE PRINCIPALE) */
+.container {
+  width: 1200px;
+  height: 580px;
+  display: flex;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #f6eeea;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18);
+}
+
+/* LEFT PANEL */
+.left-panel {
+  width: 35%; /* Réduit légèrement pour correspondre à l'image 1 */
+  background: #f35b56;
+  color: white;
+  padding: 80px 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left-panel h1 {
+  font-size: 42px; /* Plus grand comme sur l'image 1 */
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.left-panel p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+/* BUBBLES - STYLE RÉALISTE IMAGE 1 */
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  /* Dégradé radial pour simuler la lumière sur une sphère */
+  background: radial-gradient(circle at 30% 30%, 
+                rgba(255, 255, 255, 0.5) 0%, 
+                rgba(255, 255, 255, 0.1) 70%, 
+                rgba(0, 0, 0, 0.05) 100%);
+  /* Ajoute un léger flou pour l'aspect "soft" de l'original */
+  filter: blur(1px);
+}
+
+/* Positions et tailles exactes selon l'image cible */
+.b1 {
+  width: 55px;
+  height: 55px;
+  top: 40px;
+  left: 65px;
+  opacity: 0.6;
+}
+
+.b2 {
+  width: 125px;
+  height: 125px;
+  top: 30%;
+  left: 45%; /* Placée plus au centre pour mordre sur le panneau blanc */
+  z-index: 5;
+  background: radial-gradient(circle at 35% 35%, 
+                rgba(255, 255, 255, 0.45) 0%, 
+                rgba(255, 110, 100, 0.2) 80%); /* Teinte légèrement rosée pour la fusion */
+}
+
+.b3 {
+  width: 90px;
+  height: 90px;
+  bottom: 50px;
+  left: 40px;
+  opacity: 0.8;
+}
+
+/* Bulle flottante à l'intersection (si nécessaire pour copier l'image 1) */
+.b4 {
+  width: 45px;
+  height: 45px;
+  top: 55%;
+  right: -22px; /* Dépasse sur le côté droit */
+  background: #f35b56; /* Couleur pleine comme sur l'image 1 */
+  filter: none;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+/* RIGHT PANEL */
+.right-panel {
+  width: 60%;
+  background: #f6eeea;
+  padding: 50px 60px;
+}
+
+.right-panel h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 28px;
+  color: #2c203f;
+}
+
+/* FORM */
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.field label {
+  width: 130px;
+  font-size: 13px;
+  color: #444;
+}
+
+.field input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+}
+
+.field input:focus {
+  border-color: #5f4b8b;
+  box-shadow: 0 0 0 2px rgba(95, 75, 139, 0.15);
+}
+
+/* BUTTON */
+.btn-submit {
+  width: 140px;
+  margin-top: 30px;
+  margin-left: auto;
+  display: block;
+  background: linear-gradient(135deg, #5f4b8b, #2c203f);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
